@@ -26,7 +26,7 @@
   border-radius: 8px;
   box-shadow: var(--primary-box-shadow);
   border: 1px solid var(--border-white);
-  width: 70%;
+  width: 85%;
   background-color: var(--primary-background-color);
 }
 
@@ -91,4 +91,21 @@
 
 .profile-options-icon {
   font-size: 20px;
+}
+
+.cart{
+  margin-left: 85px;
+  cursor: pointer;
+}
+
+.cart:hover{
+  background-color: var(--heading-text);
+  padding: 5px;
+  border-radius: 30%;
+  text-align: center;
+}
+
+.badge-customize{
+  background-color: var(--logo-bg-color);
+  font-style: italic;
 }

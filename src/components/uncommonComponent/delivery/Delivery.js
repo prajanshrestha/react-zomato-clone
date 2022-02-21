@@ -38,22 +38,7 @@ const deliveryFilters = [
 
 const restaurantList = restaurants;
 
-export default function Delivery({ exploreSection, exploreMenu }) {
-  const pivot = function () {
-    if (exploreSection == "exploreSection") {
-      return (
-        <ExploreSection
-          list={restaurantList}
-          collectionName="Delivery Restaurants in Nepalgunj"
-        />
-      );
-    }
-    if (exploreMenu == "exploreMenu") {
-      return (
-        <ExploreMenu list={restaurantList} collectionName="The Restaurants" />
-      );
-    }
-  };
+export default function Delivery() {
   return (
     <div>
       <div className="max-width">
@@ -62,7 +47,10 @@ export default function Delivery({ exploreSection, exploreMenu }) {
       {/* <DeliveryCollections /> */}
       {/* <TopBrands /> */}
 
-      {pivot(exploreSection, exploreMenu)}
+      <ExploreSection
+        list={restaurantList}
+        collectionName="Delivery Restaurants in Nepalgunj"
+      />
     </div>
   );
 }

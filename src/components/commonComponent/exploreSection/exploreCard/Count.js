@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./Count.css";
 
 export default function Count() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(window.localStorage.getItem("counts"));
 
   useEffect(() => {
-    setCount(JSON.parse(window.localStorage.getItem("count")));
+    setCount(JSON.parse(window.localStorage.getItem("counts")));
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("count", count);
+    window.localStorage.setItem("counts", count);
   }, [count]);
 
   return (
