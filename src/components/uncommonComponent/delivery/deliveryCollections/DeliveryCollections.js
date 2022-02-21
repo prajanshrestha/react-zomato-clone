@@ -14,15 +14,15 @@ const deliveryItems = [
   },
   {
     id: 2,
-    title: "Pizza",
+    title: "Fry Rice",
     cover:
-      "https://b.zmtcdn.com/data/pictures/chains/0/18798800/7c9f7c11939dcfdf4602edaa44329167_o2_featured_v2.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/3/19076033/9434e83af577018fdd9d1a5780305643_o2_featured_v2.jpg",
   },
   {
     id: 3,
-    title: "Pizza",
+    title: "Katty Roll",
     cover:
-      "https://b.zmtcdn.com/data/pictures/chains/0/18798800/7c9f7c11939dcfdf4602edaa44329167_o2_featured_v2.jpg",
+      "https://b.zmtcdn.com/data/pictures/0/19712600/ce566392c7a37436e0ee655c9848efa7_o2_featured_v2.jpg",
   },
   {
     id: 4,
@@ -83,7 +83,9 @@ export default function DeliveryCollections() {
         <div className="collection-title">Eat what makes you happy</div>
         <Slider {...settings}>
           {deliveryItems.map((deliveryItem) => {
-            return <DeliveryItem deliveryItem={deliveryItem} key={deliveryItem.id} />;
+            return (
+              <DeliveryItem deliveryItem={deliveryItem} key={deliveryItem.id} />
+            );
           })}
         </Slider>
       </div>

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ExploreCard.css";
-import { useNavigate } from "react-router-dom";
+import Count from "./Count"
 
 export default function ExploreCard({ restaurant }) {
   const name = restaurant?.info?.name ?? "";
@@ -22,12 +22,6 @@ export default function ExploreCard({ restaurant }) {
       ? offers[0].text
       : null;
 
-let navigate = useNavigate(); 
-const goToExploreMenu = () =>{ 
-  let path = `exploreMenu`; 
-  navigate(path);
-}
-
   return (
     <div className="explore-card cursor-pointer">
       <div className="explore-card-cover">
@@ -42,12 +36,9 @@ const goToExploreMenu = () =>{
       <div className="res-row">
         <div className="res-name">{name} </div>
         {rating && (
-          <div
-            className="res-rating absolute-center"
-            onClick={goToExploreMenu}
-          >
+          <div className="res-rating absolute-center">
             {/* {rating} <i className="fi fi-rr-star absolute-center"></i> */}
-            See Menu
+            <Count />
           </div>
         )}
       </div>

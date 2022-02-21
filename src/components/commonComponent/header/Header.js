@@ -1,14 +1,14 @@
 import React from "react";
 import "./Header.css";
+import logo from "../../../images/logo.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <div className="max-width header">
-      <img
-        src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
-        alt="Zomato-Logo"
-        className="header-logo"
-      />
+      <Link to="/">
+        <img src={logo} alt="Zomato-Logo" className="header-logo cursor-pointer" />
+      </Link>
       <div className="header-right">
         {/* location and search container */}
         <div className="header-location-search-container">
@@ -36,7 +36,7 @@ export default function Header() {
             alt="Profile"
             className="header-profile-image"
           />
-          <span className="header-username">Prajan</span>
+          <span className="header-username">User</span>
           <i className="fi fi-rr-angle-down absolute-center profile-options-icon"></i>
         </div>
       </div>

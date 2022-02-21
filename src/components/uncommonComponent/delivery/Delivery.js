@@ -4,6 +4,7 @@ import Filter from "../../commonComponent/filter/Filter";
 import DeliveryCollections from "./deliveryCollections/DeliveryCollections";
 import TopBrands from "./topBrands/TopBrands";
 import { restaurants } from "../../../data/restaurants";
+import ExploreMenu from "../../commonComponent/exploreSection/exploreCard/ExploreMenu";
 
 const deliveryFilters = [
   {
@@ -37,18 +38,31 @@ const deliveryFilters = [
 
 const restaurantList = restaurants;
 
-export default function Delivery() {
+export default function Delivery({ exploreSection, exploreMenu }) {
+  const pivot = function () {
+    if (exploreSection == "exploreSection") {
+      return (
+        <ExploreSection
+          list={restaurantList}
+          collectionName="Delivery Restaurants in Nepalgunj"
+        />
+      );
+    }
+    if (exploreMenu == "exploreMenu") {
+      return (
+        <ExploreMenu list={restaurantList} collectionName="The Restaurants" />
+      );
+    }
+  };
   return (
     <div>
       <div className="max-width">
-        <Filter filterList={deliveryFilters} />
+        {/* <Filter filterList={deliveryFilters} /> */}
       </div>
-      <DeliveryCollections />
-      <TopBrands />
-      <ExploreSection
-        list={restaurantList}
-        collectionName="Delivery Restaurants in Nepalgunj"
-      />
+      {/* <DeliveryCollections /> */}
+      {/* <TopBrands /> */}
+
+      {pivot(exploreSection, exploreMenu)}
     </div>
   );
 }

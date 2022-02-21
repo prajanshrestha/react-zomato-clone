@@ -138,9 +138,9 @@ const diningList = diningOut;
 export default function DiningOut() {
   return (
     <div>
-      <Collection list={collectionList} />
+      {/* <Collection list={collectionList} /> */}
       <div className="max-width">
-        <Filter filterList={diningFilters} />
+        {/* <Filter filterList={diningFilters} /> */}
       </div>
       <ExploreSection
         list={diningList}

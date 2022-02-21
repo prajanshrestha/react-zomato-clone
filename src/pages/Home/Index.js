@@ -4,19 +4,19 @@ import TabOptions from "../../components/commonComponent/tabOptions/TabOptions";
 import Footer from "../../components/commonComponent/footer/Footer";
 import Delivery from "../../components/uncommonComponent/delivery/Delivery";
 import DiningOut from "../../components/uncommonComponent/diningOut/DiningOut";
-import NightLife from "../../components/uncommonComponent/nightLife/NightLife";
 
 export default function Index() {
-  const [activeTab, setActiveTab] = useState("Delivery");
+  const [activeTab, setActiveTab] = useState("Restaurants");
+  const [abc, setAbc] = useState("123");
 
   const getCorrectScreen = (tabOption) => {
     switch (tabOption) {
-      case "Delivery":
-        return <Delivery />;
-      case "Dining Out":
+      case "Restaurants":
+        return (
+          <Delivery exploreSection="exploreSection" exploreMenu="exploreMenu" />
+        );
+      case "Cloud Kitchen":
         return <DiningOut />;
-      case "Night Life":
-        return <NightLife />;
       default:
         return <Delivery />;
     }

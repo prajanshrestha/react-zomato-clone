@@ -97,7 +97,7 @@
 
 .res-rating {
   padding: 0px 8px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--primary-background-color);
   background-color: var(--tag-green);
@@ -108,6 +108,21 @@
 .res-rating > i {
   font-size: 10px;
   margin-left: 2px;
+}
+
+/* .see-menu {
+  padding: 0px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-background-color);
+  background-color: var(--tag-green);
+  border-radius: 6px;
+  height: 24px;
+  text-decoration: none;
+} */
+
+.see-menu:hover{
+  color: var(--primary-background-color);
 }
 
 .res-cuisine {
@@ -143,13 +158,13 @@
   margin-left: 8px;
 }
 
-.card-separator{
-    height: 1px;
-    margin: 10px 0px 5px;
-    background-color: var(--border-white);
+.card-separator {
+  height: 1px;
+  margin: 10px 0px 5px;
+  background-color: var(--border-white);
 }
 
-.explore-card:hover{
-    background-color: var(--primary-background-color);
-    border: 1px solid var(--border-white);
+.explore-card:hover {
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--border-white);
 }
