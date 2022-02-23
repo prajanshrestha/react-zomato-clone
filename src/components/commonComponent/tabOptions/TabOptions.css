@@ -41,3 +41,9 @@
 .active-tab .tab-name{
   color: var(--light-red);
 }
+
+@media screen and (max-width: 482px){
+  .tab-name {
+    font-size: 15px;
+  }
+}

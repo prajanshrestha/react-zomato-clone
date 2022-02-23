@@ -68,7 +68,9 @@ export default function Header() {
           /> */}
           {/* <span className="header-username">User</span>
           <i className="fi fi-rr-angle-down absolute-center profile-options-icon"></i> */}
-          {shoppingChartOptions(window.localStorage.getItem("counts"))}
+          <Link to="/form">
+            {shoppingChartOptions(window.localStorage.getItem("counts"))}
+          </Link>
         </div>
       </div>
     </div>

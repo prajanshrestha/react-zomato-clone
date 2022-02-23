@@ -177,3 +177,7 @@
   font-weight: 600;
   color: var(--heading-text);
 }
+
+@media screen and (max-width: 482px){
+  
+}

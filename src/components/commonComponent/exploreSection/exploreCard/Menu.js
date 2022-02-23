@@ -18,18 +18,15 @@ export default function ExploreCard({ restaurant }) {
       <div className="explore-card-cover">
         <img src={coverImg} alt={name} className="explore-card-image" />
         <div className="delivery-time">{price}</div>
-
-        {discount && <div className="discount absolute-center">{discount} Discount</div>}
+        {discount && (
+          <div className="discount absolute-center">{discount} Discount</div>
+        )}
       </div>
       <div className="res-row">
         <div className="res-name">{name} </div>
-
         <div className="res-rating absolute-center">
           <Count />
         </div>
-      </div>
-      <div className="res-row">
-        <div className="res-address">{address}</div>
       </div>
     </div>
   );
